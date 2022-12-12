@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="edu.programacion.shoppingchristmas.ui.HomeFragment"
+        android:label="@string/fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_editShoppingFragment"
+            app:destination="@id/editShoppingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createShoppingFragment"
+            app:destination="@id/createShoppingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createShoppingFragment"
+        android:name="edu.programacion.shoppingchristmas.ui.CreateShoppingFragment"
+        android:label="@string/fragment_create_shopping"
+        tools:layout="@layout/fragment_create_shopping" >
+        <action
+            android:id="@+id/action_createShoppingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editShoppingFragment"
+        android:name="edu.programacion.shoppingchristmas.ui.EditShoppingFragment"
+        android:label="@string/fragment_edit_shopping"
+        tools:layout="@layout/fragment_edit_shopping" >
+        <action
+            android:id="@+id/action_editShoppingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="edu.programacion.shoppingchristmas.model.Shopping" />
+    </fragment>
+</navigation>

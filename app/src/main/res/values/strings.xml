@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shopping Christmas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_home">Shopping</string>
+    <string name="fragment_create_shopping">Add Shopping</string>
+    <string name="fragment_edit_shopping">Edit Shopping</string>
+</resources>
